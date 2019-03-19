@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+// Variables stored
+var myBandNames = ["sachi tainaka", "the sam willows", "kesha", "carly rae jepsen", "zedd", "twice"];
+// var myBandNames = myBandNames.toLowerCase();
+// var myBandNames = myBandNames.toLowerCase(myBandNames);
+
+console.log("myBandNames lowercase | ", myBandNames);
+
+// Asking for the person's favorite band
+var promptBandName = prompt("What is your favorite band?");
+console.log("promptBandName | ", promptBandName);
+
+// conversion to lowercase replacing the value (which is not recommended... since the value can't be retrieved after)
+var promptBandName = promptBandName.toLowerCase();
+console.log("promptBandName | ", promptBandName);
+
+// check if promptBandName is in myBandNames using .indexOf()`. and toLowerCase
+console.log(myBandNames.indexOf(promptBandName));
+
+// logic on the band name check
+// 3 (===) is exactly equal to => value + datatype
+// 2 == compares the values, not the datatype
+// 1 = initializing the variable
+
+
+    if (myBandNames.indexOf(promptBandName) === -1){
+        alert("Aww....")
+        var match = false;
+        }
+    else {
+        alert("Hey! We like the same bands! Awesome!")
+        var match = true;
+    }
+
+// providing a console log of the match value
+console.log("match | ", match)
+
+// testing if the value is changed for the entire array (the answer is no)
+// var myBandNamesUpper = myBandNames.toLowerCase(myBandNames[2]);
+// This is how you return the third value in the array as a lowercase value =>
+console.log(myBandNames[2].toLowerCase());
+
+</script>
+    
+</body>
+</html>
