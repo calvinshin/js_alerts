@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    var test = confirm("This is a test");
+    console.log("var test | ", test);
+    document.write("var test | ", test);
+
+    document.write("<br>");
+
+    var name = prompt("Please enter your name");
+    console.log("var name | ", name);
+    document.write("var name | ", name);
+
+    document.write("<br>");
+
+    var nameLower = name.toLowerCase();
+    console.log("var nameLower | ", nameLower);
+    document.write("var nameLower | ", name);
+
+    document.write("<br>");
+
+    var animalArray = ["cat", "dog", "parrot", "bird", "rabbit"]
+    console.log("var animalArray | ", animalArray);
+    document.write("var animalArray | ", animalArray);
+
+    document.write("<br>");
+
+    var newAnimal = prompt("Please enter an amimal");
+    console.log("var newAnimal | ", newAnimal);
+    document.write("var newAnimal | ", newAnimal);
+
+    document.write("<br><br>");
+// test to essentially identify the prompted animal to see if it exists in the list. After checking to see if it is new, it is added to the array.
+        if (animalArray.indexOf(newAnimal.toLowerCase()) === -1) {
+            document.write(newAnimal, " is a new animal");
+            animalArray.push(newAnimal.toLowerCase());
+            document.write("<br> var animalArray (updated) | ", animalArray);
+        }
+
+        else {
+            document.write("This is a repeat animal");
+        }
+
+
+    </script>
+</body>
+</html>
