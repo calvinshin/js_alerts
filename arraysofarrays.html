@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Recap Conditionals and Loops</title>
+  </head>
+  <body>
+
+    <h1>Open the console to see the magic!</h1>
+
+    <script>
+
+      // Instructions:
+      // Using the given arrays, complete the questions below!
+
+      // Rows of Students
+      var studentsRow1 = ["Rachelle", "Jacob", "Jerome", "Greg", "Matt", "Walt"];
+      var studentsRow2 = ["Jeremiah", "Luis", "Nathan", "Analben"];
+      var studentsRow3 = ["Aisha", "Stephen", "John"];
+
+      // Entire Class
+      var entireClass = [studentsRow1, studentsRow2, studentsRow3, "Table"];
+
+
+      // How do we print out every single student in Row 1?
+        // for (let index = 0; index < array.length; index++) {
+        //     const element = array[index];
+
+        // }
+
+        function print(array) {
+            for (let i = 0; i<array.length; i++) {
+                console.log(array[i])
+            }
+            
+        }
+
+print(studentsRow1)
+
+      // How do we print out every student in Row 2 whose first name begins with J?
+
+        for (let i = 0; i<studentsRow2.length; i++) {
+            if (studentsRow2[i].charAt(0) === "J") {
+                console.log(studentsRow2[i] + " starts with J" )
+            }
+        }
+
+      // Using the entireClass array, how do we access the second student in row 3?
+
+      console.log(entireClass[2][1])
+
+      // Using the entireClass array, how do we access the third student in row 2?
+
+      console.log(entireClass[1][2])
+
+
+    </script>
+    
+  </body>
+</html>
