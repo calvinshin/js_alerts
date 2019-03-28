@@ -31,3 +31,15 @@ let myStr = 'My little Alligator 🐊';
 
 console.log(myStr.replace('Alligator', 'gator')); // My little gator 🐊
 console.log(myStr)
+
+number = 10;
+
+function summify(value) {
+  var sum = 0;
+  for(i=1; i<=value; i++) {
+    sum = i+sum
+  }
+  console.log(sum)
+}
+
+summify(number)
