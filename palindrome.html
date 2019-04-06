@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+<script type="text/javascript">
+
+var palindrome = prompt("Enter a word")
+var palindromeCheck = ""
+
+function palindromeChecker(word) {
+    for(i=0; i<palindrome.length; i++) {
+        palindromeCheck += palindrome[palindrome.length - 1 - i]};
+    if(palindrome === palindromeCheck) {
+        console.log("this is a palindrome");
+    }
+    else {
+        console.log("This is not a palindrome");
+    }
+}
+
+palindromeChecker();
+
+        // Write a function that takes in a single word as a string and returns true if it's a palindrome and false otherwise (a palindrome is spelled the same way forwards and backwards).
+
+        // Ex:
+        // Input: "noon"
+        // Output: true
+        
+        // Input: "horse"
+        // Output: false
+        
+        // Input: "racecar"
+        // Output: true
+
+</script> 
+</body>
+</html>

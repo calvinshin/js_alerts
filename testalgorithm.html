@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<div id="output"></div>
+        <!-- Write a function that takes in a string and outputs the number of vowels (not counting y).
+
+        Ex:
+        Input: "hello"
+        Output: 2
+        
+        Input: "you are great!"
+        Output: 6
+        
+        Input: "why?"
+        Output: 0     -->
+
+<script type="text/javascript">
+    
+// var input = prompt("Insert your value here");
+// var vowelArray = ["a", "e", "i", "o", "u"]
+// console.log(input)
+
+// function countingVowels() {
+//     var number = 0;
+//     for(i=0; i<input.length; i++) {
+//         var character = (input.charAt(i));
+//         if(vowelArray.indexOf(character) >= 0) {
+//             number += 1};
+//     }
+//     document.getElementById("output").innerHTML = "Number of vowels is " + number
+// }
+
+
+var game = {
+    input : "",
+    vowelArray : ["a", "i", "o", "u", "e"],
+    initialize : function() {
+        this.input = prompt("This is the second prompt");
+        this.countingVowels();
+    },
+    countingVowels : function() {
+        var number = 0;
+            for(i=0; i<this.input.length; i++) {
+                var character = (this.input.charAt(i));
+                if(this.vowelArray.indexOf(character) >= 0) {
+                    number += 1};
+            }
+       document.getElementById("output").innerHTML = "Number of vowels is " + number
+        },
+    }
+
+game.initialize();
+
+
+
+</script>
+
+</body>
+</html>
