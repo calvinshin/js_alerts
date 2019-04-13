@@ -34,12 +34,12 @@ function start() {
   //  TODO: Use setInterval to start the count here and set the clock to running.
   if (!clockRunning) {
     clockRunning = true;
-    intervalId = setInterval(function() {
+    intervalId = setTimeout(function(){ setInterval(function() {
     time++;
     $("#display").text(timeConverter(time));
     }, 1000);
-  }
-
+  }, 2000) 
+}
 }
 function stop() {
 

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NY Times Search Article</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+</head>
+<body>
+    <!-------- Jumbotron ---------->
+    <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h1 class="display-4">New York Times Search</h1>
+                </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header searchParameters">
+            Search Parameters
+        </div>
+
+        <form>
+
+        <div id="containerSearch">
+        <div class="container-fluid form-group">
+            <label for="searchterm">Search Term</label>
+            <input type="text" class="form-control" id="searchterm">
+        </div>
+        <div class="container-fluid form-group">
+          <label for="exampleFormControlSelect1">Number of Records to Retrieve:</label>
+          <select class="form-control" id="records">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option selected="selected">5</option>
+          </select>
+        </div>
+        <div class="container-fluid form-group">
+            <label for="startyear">Start Year (Optional):</label>
+            <input type="email" class="form-control" id="startyear">
+        </div>
+        <div class="container-fluid form-group">
+            <label for="endyear">End Year (Optional):</label>
+            <input type="email" class="form-control" id="endyear">
+        </div>
+
+        <div id="buttonContainer">
+        <a class="btn btn-primary" data-search="Search" href="#" role="button" id="search">Search</a>
+        <a class="btn btn-primary" data-clear="Clear Results" href="#" role="button">Clear Results</a>
+        </div>
+
+    </div>
+    </div>
+
+        <!------------ Top Articles ------------>
+        <div id="articlesContainer">
+            <div class="card topArticles">
+                <div class="card-header articles">
+                  Top Articles
+                </div>
+                <div class="card-body">
+                  <blockquote class="blockquote mb-0" id="articlesDiv">
+
+                  </blockquote>
+                </div>
+            </div>
+        </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

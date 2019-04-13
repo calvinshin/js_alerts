@@ -38,27 +38,36 @@
 // }
 
 
-var game = {
-    input : "",
-    vowelArray : ["a", "i", "o", "u", "e"],
-    initialize : function() {
-        this.input = prompt("This is the second prompt");
-        this.countingVowels();
-    },
-    countingVowels : function() {
-        var number = 0;
-            for(i=0; i<this.input.length; i++) {
-                var character = (this.input.charAt(i));
-                if(this.vowelArray.indexOf(character) >= 0) {
-                    number += 1};
-            }
-       document.getElementById("output").innerHTML = "Number of vowels is " + number
-        },
+// var game = {
+//     input : "",
+//     vowelArray : ["a", "i", "o", "u", "e"],
+//     initialize : function() {
+//         this.input = prompt("This is the second prompt");
+//         this.countingVowels();
+//     },
+//     countingVowels : function() {
+//         var number = 0;
+//             for(i=0; i<this.input.length; i++) {
+//                 var character = (this.input.charAt(i));
+//                 if(this.vowelArray.indexOf(character) >= 0) {
+//                     number += 1};
+//             }
+//        document.getElementById("output").innerHTML = "Number of vowels is " + number
+//         },
+//     }
+
+// game.initialize();
+
+var average = function(array) {
+    var sum = 0;
+    for(i = 0; i < array.length; i++) {
+        sum += array[i];
     }
+    console.log(sum / array.length)
+};
 
-game.initialize();
-
-
+array1 = [1, 4, 7];
+average(array1);
 
 </script>
 
