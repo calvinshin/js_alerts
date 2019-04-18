@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Click Button with Firebase!</title>
+
+  <!-- -->
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+</head>
+
+<body>
+
+  <!-- -->
+  <h1>Ouch! You've clicked me
+    <span id="click-value"></span> times!</h1>
+
+  <!-- -->
+  <button id="click-button">Click Me!!!!</button>
+
+  <!-- -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- ================================================================================== -->
+  <script>
+
+// Declares a variable config that has these elements. It's all a part of the regular documentation. 
+
+    var config = {
+      // API Key
+      apiKey: "asdlkfjalgdkja",
+      // authDomain -> set as a value 
+      authDomain: "fir-click-counter-7cdb9.firebaseapp.com",
+      databaseURL: "https://fir-click-counter-7cdb9.firebaseio.com",
+      storageBucket: "fir-click-counter-7cdb9.appspot.com"
+    };
+
+    // for the firebase variable from the firebase script, it calls the object function initializeApp and uses the variable config
+    firebase.initializeApp(config);
+
+    // VARIABLES
+    // --------------------------------------------------------------------------------
+
+    // Create a variable database that is the firebase's database function
+    var database = firebase.database();
+    // clickCounter is set to 0.
+    var clickCounter = 0;
+
+    // FUNCTIONS + EVENTS
+    // --------------------------------------------------------------------------------
+
+    // Jquery listener on click to trigger the function
+    $("#click-button").on("click", function() {
+      // Increases the clickCounter by 1
+      clickCounter++;
+
+      // Sets the database reference clickCount to the value of clickCounter.
+      database.ref().set({
+        // clickCount = clickCounter
+        clickCount: clickCounter
+      });
+    });
+
+    // MAIN PROCESS + INITIAL CODE
+    // --------------------------------------------------------------------------------
+
+    // listener to the database reference (all the data in the database) on a value change and uses a snapshot from the listener event
+    // This is similar to the ajax response; it's the returned value from the listener.
+
+    database.ref().on("value", function(snapshot) {
+    // console logs the snapshot.value;
+      console.log(snapshot.val());
+
+      // the clickCounter is equal to the snapshot's value.clickcount.
+      clickCounter = snapshot.val().clickCount;
+
+      // This uses a jQuery call of the clickvalue ID and updates the text with the returned value of clickCount
+      $("#click-value").text(snapshot.val().clickCount);
+      // If there is a failure on the read for whatever reason (such as clickCount not existing)
+    }, function(errorObject) {
+      // provides a log with the errorObject.code
+      console.log("The read failed: " + errorObject.code);
+    });
+
+  </script>
+
+</body>
+
+</html>
