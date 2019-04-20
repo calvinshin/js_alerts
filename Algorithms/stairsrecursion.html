@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+<script type="text/javascript">
+
+number = 3
+ways = []
+path = []
+
+function climb(n) {
+    if(path == null) {
+        var path = [];
+    }
+    if(n === 1) {
+        path.push("1");
+        ways.push(path);
+        console.log("end of path " + n);
+    }
+    else if(n === 0) {
+        console.log("path " + path);
+        ways.push(path);
+    }
+    else {
+        console.log("no other condition applied");
+        path.push("1");
+        console.log("1 " + path)
+        climb(n-1);
+        path.pop();
+        console.log("test1 " + n)
+        path.push("2");
+        climb(n-2);
+        console.log("test2 " + n)
+    }
+    console.log(ways)
+}
+
+climb(number);
+
+function solution(n) {
+    if(n <= 1) {
+        return 1
+    }
+    return solution(n-1) + solution(n-2);
+}
+
+console.log(solution(number))
+
+
+</script>
+
+</body>
+</html>
