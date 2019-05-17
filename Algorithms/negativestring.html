@@ -10,18 +10,27 @@
     
 <script type="text/javascript">
 
-```Write a function that takes in a string and if the string is a string representation of a number, return the negative version of that number otherwise throw an Error.
+// ```Write a function that takes in a string and if the string is a string representation of a number, return the negative version of that number otherwise throw an Error.
 
-Ex:
-Input: '1'
-Output: -1
+// Ex:
+// Input: '1'
+// Output: -1
 
-Input: '4'
-Output: -4
+// Input: '4'
+// Output: -4
 
-Input: 'cow'
-Error```
+// Input: 'cow'
+// Error```
 
+var test = prompt("Enter something!")
+console.log(typeof test);
+var numberTest = parseInt(test)
+if(Number.isInteger(numberTest)) {
+    console.log(numberTest * -1)
+}
+else{
+    console.log("Error");
+}
 
 
 </script> 
