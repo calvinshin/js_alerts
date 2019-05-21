@@ -82,4 +82,4 @@ var enemy = randomCharacter();
 
 console.log(enemy);
 
-enemy.levelUp()
+enemy.levelUp();
