@@ -9,7 +9,7 @@ CREATE TABLE songs (
     title VARCHAR(60),
     artist VARCHAR(40),
     genre VARCHAR(30),
-    PRIMARY KEY id
+    PRIMARY KEY (id)
 );
 
 INSERT INTO songs (title, artist, genre)
