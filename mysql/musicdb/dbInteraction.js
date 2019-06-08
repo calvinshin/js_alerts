@@ -1,5 +1,5 @@
 mysql = require("mysql");
-password = require("../../../../../password")
+password = require("../../../password");
 
 keyword = "'TWICE'";
 keyword2 = "Pop";
@@ -39,4 +39,4 @@ connection.connect(function(err) {
     })
     connection.end();
 
-})
+});
